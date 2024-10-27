@@ -137,8 +137,7 @@ legend {
 }
 
 .description h3, p {
-    position: relative
-    ;
+    position: relative;
     top: 50%;
     bottom: 50%;
     color:rgb(255, 223, 173); 
@@ -149,4 +148,5 @@ legend {
 fieldset {
     border: 5px solid #39a2ae;
     border-radius: 10px;
+    margin: 30px 0;
 }
