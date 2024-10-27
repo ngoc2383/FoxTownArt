@@ -104,6 +104,11 @@ legend {
     }
 }
 
+@media screen and (min-width: 1025px) {
+    .image-grid-col-2:first-of-type {
+        grid-row: span 2;
+    }
+}
 /* Anything over 1440px... (for large monitor) */
 @media screen and (min-width: 1440px) {
     .image-items {
@@ -142,6 +147,6 @@ legend {
 }
 
 fieldset {
-    border: 3px solid #39a2ae;
+    border: 5px solid #39a2ae;
     border-radius: 10px;
 }
