@@ -132,7 +132,8 @@ legend {
 }
 
 .description h3, p {
-    position: relative;
+    position: relative
+    ;
     top: 50%;
     bottom: 50%;
     color:rgb(255, 223, 173); 
