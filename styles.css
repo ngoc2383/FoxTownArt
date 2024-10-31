@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    background-color: rgb(255, 223, 173);
+    background-color: rgb(16, 17, 18);
     position: relative;
     overflow-x: hidden;
 }
@@ -20,13 +20,11 @@ h1, legend {
 
 header {
     margin: 0;
-    text-align: center;
     width: auto;
-    height: auto;
 
-    background-color: #39a2ae;
-    
-    clip-path: ellipse(855px 120px at 50% 1%);
+    background-image: linear-gradient(180deg, #00C9FF, #b800d4);
+
+    clip-path: ellipse(70% 150px at 50% 1%);
 }   
 
 .svg {
@@ -40,6 +38,7 @@ h1 {
     position: relative;
     top: 50%;
     bottom: 50%;
+    text-align: center;
     --shadow-color: #fff;
     --text-color: #172121;
     font-size: 100px;
@@ -51,6 +50,10 @@ legend {
     color:#172121;
     font-size: 3rem;
     text-align: center;
+
+    background-image: linear-gradient(180deg, #00c8ff, #881c98);
+    border-radius: 10px;
+    margin: 0 10px;
 }
 
 .image-grid {
@@ -110,23 +113,25 @@ legend {
 }
 
 @media screen and (min-width: 1025px) {
-    .image-grid-col-2:first-of-type {
-        grid-row: span 2;
+    .image-grid-col-2 {
+        grid-row: span 3;
+    }
+    .image-grid-row-2:last-of-type {
+        grid-column: span 4;
+    }
+    .image-grid-row-2:first-of-type {
+        grid-column: span 2;
     }
 }
 /* Anything over 1440px... (for large monitor) */
 @media screen and (min-width: 1440px) {
-    .image-items {
-        grid-row: span 2;
-    }
-
     .image-grid-row-2:last-of-type {
-        grid-column: span 3;
+        grid-column: span 4;
     }
 }
 /* When hover the image */
 .image-items:hover {
-    transform: scale(1.05);
+    transform: scale(1) + 5px;
     transition: transform 200ms;
     overflow: hidden;
     z-index: 2;
