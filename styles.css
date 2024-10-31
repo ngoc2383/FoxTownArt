@@ -24,12 +24,9 @@ header {
     width: auto;
     height: auto;
 
-    max-height: 300px;
     background-color: #39a2ae;
-    background-size: 2000px;
-    border-radius: 0 0 20px 20px;
 
-    clip-path: url(#my-clip-path);
+    clip-path: ellipse(855px 120px at 50% 1%);
 }   
 
 .svg {
