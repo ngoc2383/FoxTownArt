@@ -27,12 +27,6 @@ header {
     clip-path: ellipse(70% 150px at 50% 1%);
 }   
 
-.svg {
-    position: absolute;
-    width: 0;
-    height: 0;
-  }
-
 h1 {
     margin: 0;
     position: relative;
@@ -121,7 +115,7 @@ legend {
 }
 /* When hover the image */
 .image-items:hover {
-    transform: scale(1) + 5px;
+    transform: scale(1.01);
     transition: transform 200ms;
     overflow: hidden;
     z-index: 2;
