@@ -1,5 +1,7 @@
 :root {
-    --text-color: #172121;
+    --header-color: #172121;
+    --blue-gradient: #00C9FF;
+    --purple-gradient: #a400bd;
 }
 
 body {
@@ -27,7 +29,7 @@ header {
     margin: 0;
     width: auto;
 
-    background-image: linear-gradient(180deg, #00C9FF, #b800d4);
+    background-image: linear-gradient(180deg, var(--blue-gradient), var(--purple-gradient));
 
     clip-path: ellipse(70% 150px at 50% 1%);
 }   
@@ -39,16 +41,16 @@ h1 {
     bottom: 50%;
     text-align: center;
     font-size: 100px;
-    color: var(--text-color);
+    color: var(--header-color);
 }
 
 /* The subheadings */
 legend {
-    color: var(--text-color);
+    color: var(--header-color);
     font-size: 3rem;
     text-align: center;
 
-    background-image: linear-gradient(180deg, #00c8ff, #881c98);
+    background-image: linear-gradient(180deg, var(--blue-gradient), var(--purple-gradient));
     border-radius: 10px;
     margin: 0 10px;
 }
@@ -124,7 +126,7 @@ legend {
     width: 100%;
     height: 100%;
 
-    background: rgba(0, 0, 0, 0.6);
+    background: rgba(0, 0, 0, 0.85);
     opacity: 0; /* Initially hidden */
     transition: opacity 0.6s; /* Smooth transition */
 
@@ -136,8 +138,9 @@ legend {
 }
 
 .description h3, .description p {
-    color: var(--text-color);
+    color: #b011ad;
     padding: 0 20px;
+    font-size: 1/2em;
 }
 
 .description h3 {
@@ -161,7 +164,7 @@ legend {
 }
 
 fieldset {
-    border: 5px solid #39a2ae;
+    border: 5px solid var(--blue-gradient);
     border-radius: 10px;
     margin: 30px 0;
 }
