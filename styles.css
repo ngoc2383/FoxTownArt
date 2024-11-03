@@ -47,6 +47,20 @@ h1 {
 }
 
 /* The subheadings ========================================================================== */
+/* Divider */
+.section-div {
+    display: flex;
+    align-items: center; /* Center vertically */
+    margin: 2em 0;
+}
+
+.div-line {
+    flex: 1; /* Allow line to stretch and fill space */
+    height: 3px;
+    background-image: linear-gradient(90deg, var(--blue-gradient), var(--purple-gradient));
+    margin: 0 10px;
+}
+
 h2 {
     display: flex;
     justify-content: center;
@@ -72,15 +86,6 @@ h2 > .round-h2 {
     margin: 0 10px;
 }
 
-/* Divider */
-h2::before, 
-h2::after {
-    content: "";
-    flex: 1;
-    height: 2px; /*Line thickness */
-    background-image: linear-gradient(90deg, var(--blue-gradient), var(--purple-gradient));
-    margin: 0 10px;
-}   
 /* Profile ================================================================================= */
 h2 > img {
     position: relative;
