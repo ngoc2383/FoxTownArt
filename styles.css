@@ -89,6 +89,10 @@ legend {
     grid-column: span 2;
 }
 
+.image-grid-col-2 .description {
+    font-size: 1.2em;
+}
+
 .image-grid-row-2 {
     grid-row: span 2;
 }
@@ -112,10 +116,18 @@ legend {
         grid-column: span 2;
     }
 }
+
 /* Anything over 1440px... (for large monitor) */
 @media screen and (min-width: 1440px) {
     .image-grid-row-2:last-of-type {
         grid-column: span 4;
+    }
+    .description {
+        font-size: 1em;
+    }
+
+    .description:last-of-type, .description:first-of-type{
+        font-size: 2em; 
     }
 }
 
@@ -140,7 +152,6 @@ legend {
 .description h3, .description p {
     color: #b011ad;
     padding: 0 20px;
-    font-size: 1/2em;
 }
 
 .description h3 {
@@ -158,9 +169,10 @@ legend {
     transition: transform 200ms;
     overflow: hidden;
     z-index: 2;
-    .description {
-        opacity: 1;
-    }
+}
+
+.image-items:hover .description {
+    opacity: 1;
 }
 
 fieldset {
