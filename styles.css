@@ -51,7 +51,7 @@ h1 {
 .section-div {
     display: flex;
     align-items: center; /* Center vertically */
-    margin: 2em 0;
+    margin: 5px 0;
 }
 
 .div-line {
@@ -77,11 +77,10 @@ h2 {
     background-image: linear-gradient(180deg, var(--blue-gradient), var(--purple-gradient));
     border-radius: 10px;
     padding: 10px;
-    margin: 2em 0;
 }
 
 /* The first subheading */
-h2 > .round-h2 {
+h2 .round-h2 {
     border-radius: 100%;
     margin: 0 10px;
 }
@@ -139,41 +138,6 @@ h2 > img {
     grid-row: span 2;
 }
 
-/* Anything under 1024px... (for mobile device) */
-@media screen and (max-width: 1024px) {
-    .image-grid {
-        --num-col: 2;
-        --row-height: 250px;
-    }
-}
-
-/* For a computer/ laptop screen */
-@media screen and (min-width: 1025px) {
-    .image-grid-col-2 {
-        grid-row: span 3;
-    }
-    .image-grid-row-2:last-of-type {
-        grid-column: span 4;
-    }
-    .image-grid-row-2:first-of-type {
-        grid-column: span 2;
-    }
-}
-
-/* Anything over 1440px... (for large monitor) */
-@media screen and (min-width: 1440px) {
-    .image-grid-row-2:last-of-type {
-        grid-column: span 4;
-    }
-    .description {
-        font-size: 1em;
-    }
-
-    .description:last-of-type {
-        font-size: 2em; 
-    }
-}
-
 .description {
     position: absolute;
     top: 0;
@@ -216,5 +180,41 @@ h2 > img {
 
 .image-items:hover .description {
     opacity: 1;
+}
+
+/* Screen ================================================================================= */
+/* Anything under 1024px... (for mobile device) */
+@media screen and (max-width: 1024px) {
+    .image-grid {
+        --num-col: 2;
+        --row-height: 250px;
+    }
+}
+
+/* For a computer/ laptop screen */
+@media screen and (min-width: 1025px) {
+    .image-grid-col-2 {
+        grid-row: span 3;
+    }
+    .image-grid-row-2:last-of-type {
+        grid-column: span 4;
+    }
+    .image-grid-row-2:first-of-type {
+        grid-column: span 2;
+    }
+}
+
+/* Anything over 1440px... (for large monitor) */
+@media screen and (min-width: 1440px) {
+    .image-grid-row-2:last-of-type {
+        grid-column: span 4;
+    }
+    .description {
+        font-size: 1em;
+    }
+
+    .description:last-of-type {
+        font-size: 2em; 
+    }
 }
 
