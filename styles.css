@@ -45,7 +45,7 @@ h1 {
     color: var(--header-color);
 }
 
-/* The subheadings */
+/* The subheadings ========================================================================== */
 legend {
     display: flex;
     flex-direction: column; /* Stack items vertically */
@@ -61,10 +61,18 @@ legend {
     margin: 0 10px;
 }
 
+/* The first subheading */
+.round-legend {
+    border-radius: 100%;
+}
 /* Profile ================================================================================= */
 legend > img {
-    width: 50%;
-    height: auto;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin: 5px 5px;
+    border-radius: 100%;
+    object-fit: cover;
 }
 
 /* Gallery ================================================================================= */
