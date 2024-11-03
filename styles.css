@@ -126,7 +126,7 @@ legend {
         font-size: 1em;
     }
 
-    .description:last-of-type, .description:first-of-type{
+    .description:last-of-type {
         font-size: 2em; 
     }
 }
