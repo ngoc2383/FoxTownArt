@@ -2,15 +2,18 @@
 :root {
     --header-color: #172121;
     --blue-gradient: #00C9FF;
-    --purple-gradient: #a400bd;
+    --purple-gradient: #88009d;
     --bg-img: linear-gradient(180deg, var(--blue-gradient), var(--purple-gradient));
 }
 
 body {
-    margin: 0;
+    display: absolute;
+    margin: auto;
     background-color: rgb(16, 17, 18);
     position: relative;
     overflow-x: hidden;
+
+    max-width: 1500px;
 }
 
 .content {
@@ -27,7 +30,7 @@ h1, h2 {
     "wdth" 100;
 }
 
-p, ul {
+p {
     font-family: "Unkempt", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -70,9 +73,10 @@ h1 {
 
 .div-line {
     flex: 2; /* Allow line to stretch and fill space */
-    height: 3px;
-    background-image: var(--bg-img);
+    height: 6px;
+    background-color: var(--purple-gradient);
     margin: 0 10px;
+    border-radius: 5px;
 }
 
 h2 {
@@ -93,35 +97,59 @@ h2 {
     padding: 10px;
 }
 
-/* Profile ================================================================================= */
+/* About ================================================================================= */
 .introduction {
     display: flex;
     align-items: center;
-    gap: 0;
+    justify-content: center;
+    gap: 10px;
+
+    background-color: var(--blue-gradient);
     border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 15px;
 }
+
 .profile {
     width: 25%;
     height: auto;
-    margin: 0;
+    margin: 10px;
     object-fit: cover;
+    border-radius: 100%;
 }
 
-.intro-text {
+.intro-text, .other-info h3, .other-info p {
     width: auto;
-    height: fit-content;
     background-color: var(--blue-gradient);
 
     margin: 0;
     padding: 5px 20px;
 }
 
-.intro-text p {
-    font-size: 20px;
+.intro-text p, .other-info p {
+    font-size: 30px;
 }
 
-.intro-text h3 {
-    font-size: 30px;
+.intro-text h3, .other-info h3 {
+    font-size: 40px;
+}
+
+.other-info {
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-self: center;
+    gap: 10px;
+
+    background-color: var(--blue-gradient);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.other-info.smaller {
+    width: 80%;
 }
 /* Gallery ================================================================================= */
 .image-grid {
@@ -230,6 +258,14 @@ h2 {
     }
 
     .description.bigger-fonts p {
+        font-size: 20px;
+    }
+
+    .other-info h3, .intro-text h3 {
+        font-size: 30px;
+    }
+
+    .other-info p, .intro-text p {
         font-size: 20px;
     }
 }
