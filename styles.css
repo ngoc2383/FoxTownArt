@@ -152,6 +152,14 @@ h2 {
 .other-info.smaller {
     width: 80%;
 }
+
+.introduction:hover, 
+.other-info:hover {
+    transform: scale(1.03);
+    transition: transform 300ms;
+    overflow: hidden;
+    z-index: 2;
+}
 /* Gallery ================================================================================= */
 .image-grid {
     --gap: 20px; /* The gap between the photos */
