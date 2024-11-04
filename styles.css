@@ -3,7 +3,7 @@
     --header-color: #172121;
     --blue-gradient: #00C9FF;
     --purple-gradient: #a400bd;
-    --bg-img: linear-gradient(90deg, var(--blue-gradient), var(--purple-gradient));
+    --bg-img: linear-gradient(180deg, var(--blue-gradient), var(--purple-gradient));
 }
 
 body {
@@ -27,7 +27,7 @@ h1, h2 {
     "wdth" 100;
 }
 
-p {
+p, ul {
     font-family: "Unkempt", serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -94,25 +94,33 @@ h2 {
 }
 
 /* Profile ================================================================================= */
-.profile {
-    display: inline;
-    width: 25%;
-    height: auto;
-    margin: 5px;
-    object-fit: cover;
+.introduction {
+    display: flex;
+    align-items: center;
+    gap: 0;
     border-radius: 10px;
 }
-
-.intro {
-    display: inline;
-    background-image: var(--bg-img);
+.profile {
+    width: 25%;
+    height: auto;
+    margin: 0;
+    object-fit: cover;
 }
 
-.intro p {
+.intro-text {
+    width: auto;
+    height: fit-content;
+    background-color: var(--blue-gradient);
+
+    margin: 0;
+    padding: 5px 20px;
+}
+
+.intro-text p {
     font-size: 20px;
 }
 
-.intro h3 {
+.intro-text h3 {
     font-size: 30px;
 }
 /* Gallery ================================================================================= */
@@ -176,31 +184,25 @@ h2 {
     text-align: center;
 }
 
-.description h3, 
-.description p {
-    color: #b011ad;
-    padding: 0 20px;
-}
-
-.description h3:not(.bigger-fonts) {
+.description h3 {
+    color: #b700d3;
     margin: 0;
-    padding-bottom: 3px;
+    padding: 0 20px 3px 20px;
     font-size: 20px;
 }
 
-.description p:not(.bigger-fonts){
+.description p {
+    color: #b700d3;
     margin: 0;
+    padding: 0 20px;
     font-size: 15px;
 }
 
 .description.bigger-fonts h3 {
-    margin: 0;
-    padding-bottom: 3px;
     font-size: 40px;
 }
 
 .description.bigger-fonts p {
-    margin: 0;
     font-size: 30px;
 }
 
@@ -224,13 +226,10 @@ h2 {
         --row-height: 250px;
     }
     .description.bigger-fonts h3 {
-        margin: 0;
-        padding-bottom: 3px;
         font-size: 30px;
     }
 
     .description.bigger-fonts p {
-        margin: 0;
         font-size: 20px;
     }
 }
@@ -240,9 +239,11 @@ h2 {
     .image-grid-col-2 {
         grid-row: span 3;
     }
+
     .image-grid-row-2:last-of-type {
         grid-column: span 4;
     }
+
     .image-grid-row-2:first-of-type {
         grid-column: span 2;
     }
@@ -254,14 +255,19 @@ h2 {
         grid-column: span 4;
     }
 
-    .description.bigger-fonts h3{
-        margin: 0;
-        padding-bottom: 3px;
-        font-size: 50px; 
+    .description h3 {
+        font-size: 25px;
+    }
+
+    .description p {
+        font-size: 20px;
+    }
+
+    .description.bigger-fonts h3 {
+        font-size: 50px;
     }
 
     .description.bigger-fonts p {
-        margin: 0;
         font-size: 40px;
     }
 }
