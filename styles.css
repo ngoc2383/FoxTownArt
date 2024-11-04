@@ -21,6 +21,16 @@ body {
 }
 
 /* Set font syles */
+header {
+    margin: 0;
+    width: auto;
+    height: auto;
+
+    background-image: var(--bg-img);
+
+    clip-path: ellipse(60% 100px at 50% 20%);
+}   
+
 h1, h2 {
   font-family: "Fruktur", system-ui;
   font-optical-sizing: auto;
@@ -28,6 +38,16 @@ h1, h2 {
   font-style: normal;
   font-variation-settings:
     "wdth" 100;
+}
+
+h1 {
+    margin: 0;
+    position: relative;
+    top: 50%;
+    bottom: 50%;
+    text-align: center;
+    font-size: 100px;
+    color: var(--header-color);
 }
 
 p {
@@ -41,25 +61,6 @@ h3 {
     font-family: "Kranky", serif;
     font-weight: 400;
     font-style: normal;
-}
-header {
-    margin: 0;
-    width: auto;
-    height: auto;
-
-    background-image: var(--bg-img);
-
-    clip-path: ellipse(60% 150px at 50% 8%);
-}   
-
-h1 {
-    margin: 0;
-    position: relative;
-    top: 50%;
-    bottom: 50%;
-    text-align: center;
-    font-size: 100px;
-    color: var(--header-color);
 }
 
 /* The subheadings ========================================================================== */
@@ -94,7 +95,7 @@ h2 {
 
     background-image: var(--bg-img);
     border-radius: 10px;
-    padding: 10px;
+    padding: 0 10px;
 }
 
 /* About ================================================================================= */
@@ -247,7 +248,22 @@ h2 {
 }
 
 /* Screen ================================================================================= */
-/* Anything under 1024px... (for mobile device) */
+/* Anything under 151px... (just in case) */
+@media screen and (max-width: 600px) {
+    .intro-text h3, .other-info h3 {
+        font-size: 20px;
+    }
+
+    .intro-text p, .other-info p {
+        font-size: 10px;
+    }
+
+    h1 {
+        font-size: 70px;
+    }
+}
+
+/* For mobile phones */
 @media screen and (max-width: 1024px) {
     .image-grid {
         --num-col: 2;
