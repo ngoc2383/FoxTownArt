@@ -193,13 +193,13 @@ h2 {
     font-size: 15px;
 }
 
-.bigger-fonts h3 {
+.description.bigger-fonts h3 {
     margin: 0;
     padding-bottom: 3px;
     font-size: 40px;
 }
 
-.bigger-fonts p {
+.description.bigger-fonts p {
     margin: 0;
     font-size: 30px;
 }
@@ -223,11 +223,14 @@ h2 {
         --num-col: 2;
         --row-height: 250px;
     }
-    .bigger-fonts h3 {
+    .description.bigger-fonts h3 {
+        margin: 0;
+        padding-bottom: 3px;
         font-size: 30px;
     }
 
-    .bigger-fonts p {
+    .description.bigger-fonts p {
+        margin: 0;
         font-size: 20px;
     }
 }
@@ -250,15 +253,15 @@ h2 {
     .image-grid-row-2:last-of-type {
         grid-column: span 4;
     }
-    .description:not(.bigger-fonts){
-        font-size: 0.5em;
-    }
 
-    .bigger-fonts h3{
+    .description.bigger-fonts h3{
+        margin: 0;
+        padding-bottom: 3px;
         font-size: 50px; 
     }
 
-    .bigger-fonts p {
+    .description.bigger-fonts p {
+        margin: 0;
         font-size: 40px;
     }
 }
